@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>The Administration of Wonder</title>
+  <meta name="description" content="The Administration of Wonder is a secretive yet benevolent organization that exists at the intersection of imagination, science, and magic." />
+  <meta property="og:title" content="The Administration of Wonder" />
+  <meta property="og:description" content="A secretive yet benevolent organization that exists at the intersection of imagination, science, and magic." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alice&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="assets/incendium.ico" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div id="sparkle-container" style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;overflow:hidden;z-index:-9999;"></div>
+  <main>
+    <article>
+      <header>
+        <h1 class="title">The Administration of Wonder</h1>
+      </header>
+      
+      <section class="content">
+        <p id="intro-text">
+          The <strong>Administration of Wonder</strong> is a secretive yet benevolent organization that exists at the intersection of imagination, science,
+          <span class="mystery-box" aria-hidden="true" role="presentation">○○●○●○●●</span>
+          and magic.
+        </p>
+        <p id="mission-text">
+          Its mission is to cultivate and protect the sense of wonder across all worlds—whether in the hearts of the playful, the dreams of the hopeful, or the enterprise of the curious.
+        </p>
+        <p>
+          For wonder is not without its weight. Within every spark of curiosity lies the promise of fire, and every door, once opened, is open on both sides.
+        </p>
+        <p>
+          As stewards of potential, the Administration strives to tilt the balance of possibility toward awe—and away from calamity.
+        </p>
+        <p class="motto">incendium latet, ianum servamus | mmxxv</p>
+      </section>
+    </article>
+  </main>
+
+  <!-- Hidden Sparkle SVG Template -->
+  <svg id="sparkle-template" viewBox="0 0 100 100" style="display: none;" aria-hidden="true" focusable="false">
+    <g id="sparkle-group">
+      <rect id="sparkle-core" x="48.5" y="48.5" width="3" height="3" rx="1" ry="1" />
+      <line class="sparkle-ray" x1="50" y1="50" x2="8" y2="50" stroke-linecap="round" />
+      <line class="sparkle-ray" x1="50" y1="50" x2="92" y2="50" stroke-linecap="round" />
+      <line class="sparkle-ray" x1="50" y1="50" x2="50" y2="8" stroke-linecap="round" />
+      <line class="sparkle-ray" x1="50" y1="50" x2="50" y2="92" stroke-linecap="round" />
+    </g>
+  </svg>
+  <svg width="0" height="0">
+    <filter id="noise-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+  
+  <!-- Scripts -->
+  <script src="assets/js/scripts.js" defer></script>
+  
+  <!-- Sparkles -->
+  <link rel="stylesheet" href="sparkles/sparkles.css" />
+  <script src="sparkles/sparkles.js" defer></script>
+</body>
+</html>

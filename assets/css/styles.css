@@ -1,0 +1,121 @@
+/* ------------------------------
+   🌈 Theme Variables
+------------------------------ */
+:root {
+  --copy-color: rgb(20, 25, 37);
+  --base-color: rgb(207, 171, 181);
+  --dimmed-color: rgb(169, 129, 140);
+  --bg-color: rgb(244, 225, 230);
+  --spot-color: rgb(255, 100, 141);
+  --font-serif: "Libre Baskerville", serif;
+  --font-display: "Alice", serif;
+
+  --max-content-width: 680px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --copy-color: rgb(244, 225, 230);
+    --base-color: rgb(207, 171, 181);
+    --dimmed-color: rgb(169, 129, 140);
+    --bg-color: rgb(20, 25, 37);
+    --spot-color: rgb(255, 100, 141);
+  }
+}
+
+/* ------------------------------
+   ✨ Base Styles
+------------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--copy-color);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: var(--spot-color);
+  color: var(--copy-color);
+}
+
+/* ------------------------------
+   📝 Typography
+------------------------------ */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1.title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+p.motto {
+  font-variant: small-caps;
+}
+
+/* ------------------------------
+   📄 Layout
+------------------------------ */
+main {
+  width: 100%;
+  padding: 2rem;
+  z-index: 2;
+}
+
+article {
+  max-width: var(--max-content-width);
+  margin: auto;
+  background: transparent;
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  h1.title {
+    font-size: 2.4rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  article {
+    padding: 3rem 2rem;
+  }
+}
+
+/* ------------------------------
+   🕳️ Mystery Box
+------------------------------ */
+.mystery-box {
+  display: inline-block;
+  background: var(--copy-color);
+  color: transparent;
+  letter-spacing: 0.2em;
+  padding: 0 0.3em;
+  border-radius: 2px;
+  line-height: 1;
+}
