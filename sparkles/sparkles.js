@@ -12,7 +12,7 @@ function spawnSparkle(x, y) {
   sparkle.style.position = "absolute";
   sparkle.style.left = `${x - 50}px`;
   sparkle.style.top = `${y - 50}px`;
-  sparkle.style.filter = "url(#noise-filter)";
+  // sparkle.style.filter = "url(#noise-filter)";
   sparkle.style.transform = `scale(${scale})`;
   sparkle.style.transformOrigin = "center center";
 
