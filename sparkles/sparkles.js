@@ -12,7 +12,6 @@ function spawnSparkle(x, y) {
   sparkle.style.position = "absolute";
   sparkle.style.left = `${x - 50}px`;
   sparkle.style.top = `${y - 50}px`;
-  // sparkle.style.filter = "url(#noise-filter)";
   sparkle.style.transform = `scale(${scale})`;
   sparkle.style.transformOrigin = "center center";
 
@@ -37,7 +36,6 @@ function spawnSparkle(x, y) {
 
   requestAnimationFrame(animateRotation);
 
-  // ... rest of the sparkle logic (CSS animations, removal timer, etc.)
   setTimeout(() => sparkle.remove(), duration + 0);
 }
 
@@ -49,8 +47,8 @@ function getRandomPositionBiasEdges() {
 
   function strongEdgeBias(spread) {
     const r = Math.random();
-    const exponent = 4; // Adjust this: higher = stronger edge bias
-    const biased = Math.pow(r, 1 / exponent); // Bias toward 1
+    const exponent = 4; // higher = stronger edge bias
+    const biased = Math.pow(r, 1 / exponent); // bias toward 1
     const sign = Math.random() < 0.5 ? -1 : 1;
     return sign * spread * biased;
   }

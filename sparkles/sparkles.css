@@ -8,7 +8,6 @@
   width: 100px;
   height: 100px;
   pointer-events: none;
-  z-index: 1;
 }
 
 /* Keyframes */
@@ -106,4 +105,15 @@
   animation-duration: 2s;
   animation-timing-function: linear;
   transform-origin: 50% 50%;
+}
+
+#sparkle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -9999;
 }
